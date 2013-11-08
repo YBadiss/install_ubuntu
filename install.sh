@@ -8,6 +8,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 wget https://raw.github.com/rupa/z/master/z.sh
+mv z.sh ./files/
 
 sudo apt-get update
 
@@ -28,5 +29,4 @@ sudo apt-get install -y naturalscrolling
 
 sudo apt-get autoremove
 
-sudo cp .bashrc ~/
-sudo cp z.sh ~/
+sudo cp -r ./files/* ~/

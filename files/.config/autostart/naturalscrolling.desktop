@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Natural Scrolling
+GenericName=Natural Scrolling
+Comment=Natural Scrolling application
+Exec=naturalscrolling
+Icon=/usr/share/naturalscrolling/media/naturalscrolling.svg
+Terminal=false
+Categories=GTK;Utility;
+StartupNotify=true
