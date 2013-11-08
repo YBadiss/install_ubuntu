@@ -17,7 +17,7 @@ sudo apt-get install -y skype
 sudo apt-get install -y google-chrome-stable
 sudo apt-get install -y sublime-text
 sudo apt-get install -y ipython
-sudo apt-get install -y pypy
+sudo apt-get install -y pyhton-pip
 sudo apt-get install -y tilda
 sudo apt-get install -y git
 
