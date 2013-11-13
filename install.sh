@@ -26,8 +26,11 @@ sudo apt-get install -y git
 sudo apt-get install -y vim
 sudo apt-get install -y python-dev
 sudo apt-get install -y naturalscrolling
-sudo apt-get install default-jdk
+sudo apt-get install -y default-jdk
+sudo apt-get install -y gnome-tweak-tool
 
 sudo apt-get autoremove
 
 sudo cp -r ./files/* ~/
+
+sudo gnome-tweak-tool
