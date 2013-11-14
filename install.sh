@@ -33,5 +33,6 @@ sudo apt-get install -y cmake
 sudo apt-get autoremove
 
 sudo cp -r ./files/* ~/
+git config --global credential.helper "cache --timeout=7200"
 
 sudo gnome-tweak-tool
