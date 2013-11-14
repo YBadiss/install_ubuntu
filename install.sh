@@ -28,6 +28,7 @@ sudo apt-get install -y python-dev
 sudo apt-get install -y naturalscrolling
 sudo apt-get install -y default-jdk
 sudo apt-get install -y gnome-tweak-tool
+sudo apt-get install -y cmake
 
 sudo apt-get autoremove
 
