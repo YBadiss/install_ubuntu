@@ -1,0 +1,37 @@
+[user]
+  name = Yacine Badiss
+  email = yacine.badiss@gmail.com
+[color]
+  ui = true
+[core]
+  excludesfile = /Users/ybadiss/.gitignore_global
+  whitespace = cr-at-eol
+	editor = /usr/bin/vim
+[alias]
+  cp = !"f() { git cc $1 && git pull; }; f"
+  cb = !"git cc -b"
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lga = !"git lg --all"
+  lgs = !"git lg -10"
+  lgas = !"git lga -10"
+  st = status -uno
+  stu = status -u
+  sub-sync = submodule foreach -q git submodule sync
+  sub-upd = submodule update --init --recursive
+  sub = !"git sub-sync && git sub-upd"
+  addnw = !"git diff -w --no-color | git apply --cached --ignore-whitespace"
+  cc = !"~/bin/save_n_checkout.sh"
+  get-stash = !"f() { git log -g stash --grep=\"$*\" --pretty=format:\"%gd\" 2> /dev/null; }; f"
+	pushf = push --force-with-lease
+	back = !"f() { git checkout $(~/bin/previous_branches $1); }; f"
+	fixup = !"f() { git commit --fixup=$1 && git rebase -i $1^; }; f"
+[merge]
+  tool = meld
+[credential]
+	helper = osxkeychain
+[push]
+  default = current
+[pull]
+	rebase = preserve
+[rebase]
+	autosquash = true
