@@ -1,0 +1,25 @@
+#!/bin/bash
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+if [[ $current_branch == 'HEAD' ]]; then
+    current_branch=$(git rev-parse --short HEAD)
+fi
+
+if [[ -n $1 ]]; then
+    re='^[0-9]+$'
+    if ! [[ $1 =~ $re ]]; then
+        echo $1
+        exit 0
+    fi
+    depth=$1
+else
+    depth=1
+fi
+
+if [[ -n $2 ]]; then
+    num=$2
+else
+    num=1
+fi
+
+git reflog | sed -n -e 's/^.* checkout: moving from .* to //p' | grep -v $current_branch | awk '!x[$0]++' | head -n $depth | tail -n $num
